@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Design Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css for fade-in effects -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+    /* Global Reset & Typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section with Animated Gradient */
+    .hero {
+      height: 40vh;
+      background: linear-gradient(45deg, #ff9900, #ff5722, #ff9800, #ffc107);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .hero p {
+      font-size: 1rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Container for the Gallery */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Hover Zoom */
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Gallery Container -->
+  <div class="container">
+    <!-- Optional Title -->
+    <h2 class="animate__animated animate__fadeInUp" style="text-align: center; margin-bottom: 1.5rem;">
+      Hardware & Networking Work
+    </h2>
+
+    <!-- Responsive Gallery -->
+    <div class="gallery">
+
+      <!-- 1. price giving ceremony.jpg -->
+      <img
+        src="../hardware/img2.jpeg"
+        alt="price giving ceremony"
+        class="animate__animated animate__fadeInUp"
+        style="animation-delay: 0.2s;"
+      />
+
+      <!-- 2. 942585.jpg -->
+      <img
+        src="../hardware/img1.jpeg"
+        alt="942585"
+        class="animate__animated animate__fadeInUp"
+        style="animation-delay: 0.3s;"
+      />
+
+      <!-- 3. Admission-for-diit-driving2.jpg -->
+      <img
+        src="../hardware/img3.jpeg"
+        alt="Admission-for-diit-driving2"
+        class="animate__animated animate__fadeInUp"
+        style="animation-delay: 0.4s;"
+      />
+
+      <!-- 4. We Are Hiring Simple Facebook Post.jpg -->
+      <img
+        src="../hardware/img4.jpeg"
+        alt="We Are Hiring Simple Facebook Post"
+        class="animate__animated animate__fadeInUp"
+        style="animation-delay: 0.5s;"
+      />
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+</body>
+</html>

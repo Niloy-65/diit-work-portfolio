@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Design Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Animate.css for fade-in effects -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Include SheetJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+  <style>
+    /* Global Reset & Typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Row Layout */
+    .file-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* File Icons */
+    .file-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ff5722;
+      color: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 3rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      width: 160px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .file-link:hover {
+      background: #e64a19;
+      transform: scale(1.1); /* Slight scale-up effect */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
+
+    .file-link span {
+      margin-top: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* Certificate Section */
+    .certificate-link {
+      display: block;
+      background: #4CAF50;
+      color: #fff;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .certificate-link:hover {
+      background: #388E3C;
+      transform: scale(1.05);
+    }
+
+    /* File Viewer */
+    #fileViewer {
+      display: none;
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    #excelViewer {
+      width: 100%;
+      height: 600px;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInUp" style="text-align: center; margin-bottom: 1.5rem;">
+      Data Entry Files
+    </h2>
+
+    <!-- All Files in One Row -->
+    <div class="file-row">
+      <!-- PDF Files -->
+      <a href="javascript:void(0)" class="file-link animate__animated animate__fadeInUp" onclick="showFile('../data-entry/pdf1.pdf', 'pdf')">
+        📄 <span>File 1</span>
+      </a>
+      <a href="javascript:void(0)" class="file-link animate__animated animate__fadeInUp" onclick="showFile('../data-entry/pdf2.pdf', 'pdf')">
+        📄 <span>File 2</span>
+      </a>
+      <a href="javascript:void(0)" class="file-link animate__animated animate__fadeInUp" onclick="showFile('../data-entry/pdf3.pdf', 'pdf')">
+        📄 <span>File 3</span>
+      </a>
+      <a href="javascript:void(0)" class="file-link animate__animated animate__fadeInUp" onclick="showFile('../data-entry/pdf4.pdf', 'pdf')">
+        📄 <span>File 4</span>
+      </a>
+      <a href="javascript:void(0)" class="file-link animate__animated animate__fadeInUp" onclick="showFile('../data-entry/pdf5.pdf', 'pdf')">
+        📄 <span>File 5</span>
+      </a>
+    </div>
+
+    <!-- Certificate Link (highlighted and responsive) -->
+    <a href="../CamScanner(2).PDF" class="certificate-link animate__animated animate__fadeInUp">
+      🎓 My Certificate
+    </a>
+
+    <!-- File Viewer for PDFs -->
+    <iframe id="fileViewer"></iframe>
+
+    <!-- File Viewer for Excel -->
+    <div id="excelViewer"></div>
+  </div>
+
+  <script>
+    function showFile(fileUrl, fileType) {
+      console.log("Opening:", fileUrl);
+
+      let pdfViewer = document.getElementById('fileViewer');
+      let excelViewer = document.getElementById('excelViewer');
+
+      if (fileType === 'excel') {
+        // Hide PDF Viewer
+        pdfViewer.style.display = 'none';
+
+        // Fetch and display the Excel file content using SheetJS
+        fetch(fileUrl)
+          .then(response => response.arrayBuffer())
+          .then(data => {
+            let workbook = XLSX.read(data, { type: 'array' });
+            let htmlString = XLSX.utils.sheet_to_html(workbook.Sheets[workbook.SheetNames[0]]);
+            excelViewer.innerHTML = htmlString;
+            excelViewer.style.display = 'block';
+          })
+          .catch(err => {
+            console.error("Error reading Excel file:", err);
+            alert("Failed to load the Excel file.");
+          });
+      } else if (fileType === 'pdf') {
+        // Hide Excel Viewer
+        excelViewer.style.display = 'none';
+
+        // Show PDF in iframe
+        pdfViewer.style.display = 'block';
+        pdfViewer.src = fileUrl;
+      } else {
+        alert("Unsupported file type!");
+      }
+    }
+  </script>
+
+</body>
+</html>

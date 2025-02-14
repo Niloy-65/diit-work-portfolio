@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Design Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Animate.css for fade-in effects -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <style>
+  
+    /* Global Reset & Typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section with Animated Gradient */
+    .hero {
+      height: 40vh;
+      background: linear-gradient(45deg, #ff9900, #ff5722, #ff9800, #ffc107);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: 1rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Container for the Gallery */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Zoom */
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Certificate Link Styles */
+    .certificate-link {
+      display: block;
+      background: #4CAF50;
+      color: #fff;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .certificate-link:hover {
+      background: #388E3C;
+      transform: scale(1.05);
+    }
+
+    /* Certificate Container Styles */
+    .certificate-container {
+      margin: 30px auto 10px auto;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 50%;
+      position: relative;
+      animation: glow 2s infinite alternate;
+    }
+
+    .certificate-container img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .certificate-container:hover img {
+      transform: scale(1.05);
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 1);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Title Styling */
+    .t1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Certificate Link (highlighted and responsive) -->
+  <a href="#certificate-section" class="certificate-link animate__animated animate__fadeInUp">
+    🎓Show My Certificate
+  </a>
+  
+  <!-- Main Gallery Container -->
+  <div class="container">
+    <!-- Optional Title -->
+    <h2 class="animate__animated animate__fadeInUp" style="text-align: center; margin-bottom: 1.5rem;">
+      Featured Designs
+    </h2>
+
+    <!-- Responsive Gallery -->
+    <div class="gallery">
+      <!-- Your gallery images here... -->
+      <img
+      src="../graphics-design/diploma admission 4.jpg"
+      alt="price giving ceremony"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.2s;"
+    />
+
+    <!-- 2. 942585.jpg -->
+    <img
+      src="../graphics-design/winner.jpeg"
+      alt="942585"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.3s;"
+    />
+
+    <!-- 3. Admission-for-diit-driving2.jpg -->
+    <img
+      src="../graphics-design/diploma admesion.jpg"
+      alt="Admission-for-diit-driving2"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.4s;"
+    />
+
+    <!-- 4. We Are Hiring Simple Facebook Post.jpg -->
+    <img
+      src="../graphics-design/bsc in cse admision.jpg"
+      alt="We Are Hiring Simple Facebook Post"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.5s;"
+    />
+
+    <!-- 5. Blue And Gold Blue Illustrative We Are Hiring Facebook Post.jpg -->
+    <img
+      src="../graphics-design/Blue and Gold Illustrative Giveaway Winner Instagram Post_20250206_140310_0000.jpg"
+      alt="Blue And Gold Blue Illustrative We Are Hiring Facebook Post"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.6s;"
+    />
+
+    <!-- 6. Bsc in CSE.jpg -->
+    <img
+      src="../graphics-design/vairuse aleart post.jpg"
+      alt="Bsc in CSE"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.7s;"
+    />
+
+    <!-- 7. diit-2-month-calender3.jpg -->
+    <img
+      src="../graphics-design/We Are Hiring Job Instagram Post.jpg"
+      alt="diit-2-month-calender3"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.8s;"
+    />
+
+    <!-- 8. diit-clender3.jpg -->
+    <img
+      src="../graphics-design/diploma-admession-post.jpg"
+      alt="diit-clender3"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 0.9s;"
+    />
+    <!-- 9. study tour.jpg -->
+    <img
+      src="../graphics-design/Blue Modern College Admission Instagram Post (2).jpg"
+      alt="study tour"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.0s;"
+    />
+
+    <!-- 10. diit-sticker-&-h-floor.jpg -->
+    <img
+      src="../graphics-design/White And Blue Modern School Admission Instagram Post_20250203_164406_0000.jpg"
+      alt="diit-sticker-&-h-floor"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.1s;"
+    />
+
+    <!-- 11. diploma-admission.jpg -->
+    <img
+      src="../graphics-design/Black Simple We Are Hiring Instagram Post.jpg"
+      alt="diploma-admission"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.2s;"
+    />
+
+    <!-- 12. bsc in cse admission.jpg -->
+    <img
+      src="../graphics-design/dioploma-addmission-post-for-diit.jpg"
+      alt="bsc in cse admission"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.3s;"
+    />
+
+    <!-- 13. room level design.jpg -->
+    <img
+      src="../graphics-design/carrom champion post.jpg"
+      alt="room level design"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.4s;"
+    />
+
+    <!-- 14. sports.jpg -->
+    <img
+      src="../graphics-design/bsc-admession.jpg"
+      alt="sports"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.5s;"
+    />
+
+    <!-- 15. carrom champion post.jpg -->
+    <img
+      src="../graphics-design/Admission-for-diit-driving-2.jpg"
+      alt="carrom champion post"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.6s;"
+    />
+
+    <!-- 16. diploma admission2.jpg -->
+    <img
+      src="../graphics-design/Admission-for-diit-driving2.jpg"
+      alt="diploma admission2"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.7s;"
+    />
+
+    <!-- 17. vairuse alert.jpg -->
+    <img
+      src="../graphics-design/diit-clender3.jpg"
+      alt="vairuse alert"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.8s;"
+    />
+
+    <!-- 18. We Are Hiring Job Poster.jpg -->
+    <img
+      src="../graphics-design/diit-2-month-clender.jpg"
+      alt="We Are Hiring Job Poster"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.9s;"
+    />
+    <img
+      src="../graphics-design/Diit-sticker--8th-floor.jpg"
+      alt="We Are Hiring Job Poster"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.9s;"
+    />
+    <img
+      src="../graphics-design/price  giving ceromony.jpg"
+      alt="We Are Hiring Job Poster"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.9s;"
+    />
+    <img
+      src="../graphics-design/sports-X-banner.jpg"
+      alt="We Are Hiring Job Poster"
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 1.9s;"
+    />
+    </div>
+  </div>
+
+  <!-- Certificate Section -->
+  <h1 style="text-align: center; margin-top: 50px;">My Certificate</h1>
+  <div id="certificate-section" class="certificate-container animate__animated animate__zoomIn">
+    <img src="../GRAPHICS-DESIGN-CERTIFICATE.jpg" alt="My Certificate" />
+  </div>
+</body>
+</html>

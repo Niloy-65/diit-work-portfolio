@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Skills Landing Page</title>
+  <style>
+    /* Basic Reset & Global Styles */
+    /* Apply fade-in animation to all cards */
+.card {
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+  opacity: 0; /* Start with opacity 0 to make animation visible */
+}
+
+/* Delay animation for each card for a smooth cascading effect */
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+.card:nth-child(4) { animation-delay: 1.2s; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+
+    /* Container for the whole section */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 3rem ;
+      text-align: center;
+    }
+
+    /* Small title above main heading */
+    .small-title {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Main heading style */
+    .main-title {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Card grid layout */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Individual card styles */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    /* First card (highlighted in green) */
+    .card.green {
+      background: #4CAF50;
+      color: #fff;
+    }
+
+    /* Card headings and text */
+    .card h3 {
+      margin: 1rem 0;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    /* Ensure text remains visible in green card */
+    .card.green p {
+      color: #f1f1f1;
+    }
+
+    /* Icon styling (using emoji placeholders here, but you can replace with SVG or icon fonts) */
+    .icon {
+      font-size: 2.5rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    /* White icon in the green card */
+    .card.green .icon {
+      color: #fff;
+    }
+    /* Green icons in the white cards */
+    .card:not(.green) .icon {
+      color: #4CAF50;
+    }
+  /* Basic Reset & Global Styles */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+
+    /* Container for the whole section */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .profile img:hover {
+      transform: scale(1.1);
+    }
+    .profile h2 {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #4CAF50;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .profile img {
+        width: 100px;
+        height: 100px;
+      }
+      .profile h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Profile Section -->
+   <br>
+   <br>
+  <div class="profile">
+    <img src="image/my-image2.jpeg" alt="My Profile Picture">
+    <h2>Md. Nurul Alam</h2>
+  </div>
+  <!-- Landing Section -->
+  <div class="container">
+    <h1 class="main-title">Here I show my skills and experience at Daffodil Institute of IT, Chattogram</h1>
+
+    <!-- Cards Row -->
+    <div class="cards">
+      <!-- Card 1: Graphics Design (Highlighted) -->     
+      <div class="card green">
+        <a href="image/file/graphics.html" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="icon">🎨</div>
+          <h3>Graphics Design</h3>
+          <p>
+            Creative designs that captivate your audience and bring your ideas to life.
+          </p>
+        </a>
+      </div>
+      
+      <!-- Card 3: Data Entry -->
+<div class="card">
+  <a href="image/file/data-entry.html" target="_blank" style="text-decoration: none; color: inherit;">
+    <div class="icon">📝</div>
+    <h3>Data Entry</h3>
+    <p>
+      Accurate and efficient data entry to organize and streamline your operations.
+    </p>
+  </a>
+</div>
+
+
+      <!-- Card 2: Hardware -->
+      <div class="card">
+        <a href="image/file/hardware.html" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="icon">💻</div>
+            <h3>Hardware & Networking</h3>
+            <p>
+              Reliable hardware solutions to keep your systems up and running smoothly.
+            </p>
+        </a>
+    </div>
+    
+
+
+
+      <!-- Card 4: Event Management -->
+      <div class="card">
+        <div class="icon">🎉</div>
+        <h3>Event Management</h3>
+        <p>
+          Seamless planning and coordination to make every event memorable.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
